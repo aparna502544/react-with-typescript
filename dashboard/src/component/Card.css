@@ -1,0 +1,162 @@
+
+/* Main card */
+.card {
+    width: 100%;
+    min-height: 300px;
+    background-color: white;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #edf0f4;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Header */
+.header {
+    width: 100%;
+    height: 145px;
+    background-color: #59a765;
+}
+
+/* Different card header colors */
+.card:nth-child(1) .header {
+    background-color: #59a765;
+}
+
+.card:nth-child(2) .header {
+    background-color: #4d83e8;
+}
+
+.card:nth-child(3) .header {
+    background-color: #df5045;
+}
+
+.card:nth-child(4) .header {
+    background-color: #438b4d;
+}
+
+/* Menu button */
+.menu-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 44px;
+    height: 44px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(0,0,0,0.08);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Title */
+.card h2 {
+    position: absolute;
+    top: 43px;
+    left: 27px;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Period */
+.card > p {
+    position: absolute;
+    top: 83px;
+    left: 27px;
+    color: rgba(255,255,255,0.85);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* Card content */
+.card-content {
+    padding: 25px 27px 20px;
+    min-height: 130px;
+}
+
+/* Next action */
+.action {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #9ca7b6;
+    margin: 12px 0 20px;
+}
+
+/* Due date */
+.due {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    color: #5552c8;
+    background-color: #f0efff;
+    padding: 5px 11px;
+    border-radius: 20px;
+}
+
+/* Assignment */
+.card-content h3 {
+    font-size: 17px;
+    font-weight: bold;
+    color: #252d3b;
+    margin-top: 15px;
+}
+
+/* Footer */
+.card-footer {
+    min-height: 70px;
+    padding: 0 27px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #edf0f4;
+    color: #98a2b1;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Clipboard icon */
+.card-footer svg {
+    width: 20px;
+    height: 20px;
+    color: #9aa5b4;
+    cursor: pointer;
+}
+
+/* Four cards in one row */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .card-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
